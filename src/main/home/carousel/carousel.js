@@ -1,7 +1,26 @@
 import React from 'react';
 
+import CarouselItems from './items.js';
 import './carousel.css';
 
+function ItemList(props) {
+    const items = props.items;
+    const itemList = items.map((item) =>
+     <div class="item active">
+      <img class="first-slide" src={item.src} alt="Slide" />
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>{item.head}</h1>
+          <p>{item.text}</p>
+        </div>
+      </div>
+     </div>
+    );
+    return ({itemList});
+}
+
+const items = CarouselItems;
+ 
 class Carousel extends React.Component {
     render() {
         return(
@@ -14,7 +33,9 @@ class Carousel extends React.Component {
               <li data-target="#banner" data-slide-to="4"></li>
             </ol>
             <div class="carousel-inner" role="listbox">
-              <div class="item active">
+              <ItemList items={items} />
+
+              {/* <div class="item active">
                 <img class="first-slide" src="./images/banner.png" alt="First slide" />
                 <div class="container">
                   <div class="carousel-caption">
@@ -68,7 +89,7 @@ class Carousel extends React.Component {
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div class="center-align">
             <a class="left carousel-control" href="#banner" role="button" data-slide="prev">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './menu.css';
 
@@ -9,8 +10,8 @@ class Menu extends React.Component {
               <div className="menu__container">
                 <div className="menu__navigation">
                   <div className="menu__link-row">
-                    <a href="/home" className="menu__link">HOME</a>
-                    <a href="/aboutus" className="menu__link">ABOUT US</a>
+                    <Link to="/home" className="menu__link">HOME</Link>
+                    <Link to="/aboutus" className="menu__link">ABOUT US</Link>
                     <a href="#service" className="menu__link">SERVICE</a>
                     <a href="#pages" className="menu__link">PAGES</a>
                     <a href="#blog" className="menu__link">BLOG</a>

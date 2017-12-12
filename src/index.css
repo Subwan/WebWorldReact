@@ -1,0 +1,28 @@
+.no-margin {
+    margin: 0;
+  }
+  
+  .social-link {
+    text-decoration: none;
+    padding: 15px;
+  }
+  
+  .social-bar {
+    background-color: #222;
+    margin-right: 30px !important;
+  }
+  
+  .social-link:hover {
+    text-decoration: none;
+  }
+  
+  .social-bar__icon {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    fill: #c1c1c1;
+  }
+  
+  .social-bar__icon:hover {
+    fill: #ffffff;
+  }

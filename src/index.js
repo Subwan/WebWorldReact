@@ -5,11 +5,15 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 
 import Header from './header/header.js'
+import Menu from './menu/menu.js'
 
 class App extends React.Component {
     render() {
         return(
-           <Header />
+            <div>
+              <Header />
+              <Menu />
+           </div>
         );
     }
 }

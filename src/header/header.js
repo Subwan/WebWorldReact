@@ -9,7 +9,9 @@ class Header extends React.Component {
             <div className="container">
               <div className="nav navbar-header">
                 <img className="navbar-brand header__brand" src={logo} alt="logo" />
-                <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#social-bar" aria-expanded="false" aria-controls="social-bar">
+                <button type="button" className="navbar-toggle collapsed" 
+                data-toggle="collapse" data-target="#social-bar" 
+                aria-expanded="false" aria-controls="social-bar">
                      <span className="sr-only">Toggle navigation</span>
                      <span className="icon-bar"></span>
                      <span className="icon-bar"></span>

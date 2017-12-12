@@ -4,8 +4,9 @@ import { BrowserRouter } from 'react-router-dom';
 
 import './index.css';
 
-import Header from './header/header.js'
-import Menu from './menu/menu.js'
+import Header from './header/header.js';
+import Menu from './menu/menu.js';
+import Main from './main/main.js';
 
 class App extends React.Component {
     render() {
@@ -13,6 +14,7 @@ class App extends React.Component {
             <div>
               <Header />
               <Menu />
+              <Main />
            </div>
         );
     }

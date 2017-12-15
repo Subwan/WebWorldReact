@@ -6,7 +6,7 @@ import { debug } from 'util';
 import Home from './home/home.js';
 import About from './about/about.js';
 
-const Main= () => (
+const Main = () => (
     <main>
         <Switch>
             <Route exact path='/' component={Home} />

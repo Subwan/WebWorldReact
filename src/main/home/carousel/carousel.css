@@ -1,41 +1,62 @@
 .carousel {
     height: 554px;
-  }
+}
   
-  .carousel-indicators>li {
-    background-color: #ffffff;
-  }
+.item {
+    height: 554px;
+    text-align: center;
+}
   
-  .carousel-indicators .active {
-    background-color: #00c8c8;
-    border: 0;
-  }
-  
-  .carousel-caption {
-    top: 255px;
-    z-index: 10;
-  }
-  
-  .carousel-control {
+.item__caption {
+  position: absolute;
+  top: 255px;
+  color: #ffffff;
+  z-index: 10;
+  width: 40vw;
+  margin-left: 30vw;
+}
+
+.slick-dots {
+  bottom: 15px;
+}
+
+.slick-dots li button:before {
+  font-size: 14px;
+  color:#ffffff;
+  opacity: 1;
+}
+
+
+.slick-active button:before {
+  color:#00c8c8 !important;
+  opacity: 1 !important;
+}
+
+.slick-next {
+  right: 20vw;
+}
+
+.slick-prev {
+  left: 20vw;
+  z-index: 10;
+}
+
+.carousel-control {
     width: 40%;
-  }
+ }
   
-  .carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .glyphicon-circle-arrow-left, .carousel-control .glyphicon-menu-left, .carousel-control .glyphicon-menu-right {
+.carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .glyphicon-circle-arrow-left, .carousel-control .glyphicon-menu-left, .carousel-control .glyphicon-menu-right {
     display: inline-block;
     position: absolute;
     top: 50%;
     z-index: 5;
     font-size: 50px;
-  }
+}
   
-  .carousel .item {
-    height: 554px;
-  }
   
-  .carousel-inner>.item>img {
+.item>img {
     position: absolute;
     top: -260px;
-    left: 0;
-    min-width: 100%;
+    min-width: 100vw;;
     height: 813px;
-  }
+}

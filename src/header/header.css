@@ -1,3 +1,7 @@
+.header {
+    height: 61px;
+}
+
 .header__brand {
     margin-left: 30px !important;
 }

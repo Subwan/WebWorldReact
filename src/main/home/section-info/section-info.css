@@ -1,0 +1,86 @@
+.info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 50px;
+    background-color: #4b4d4e;
+    color: #c0c0c0;
+  }
+  
+  .info__container {
+    display: flex;
+    width: 1072px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .info__item {
+    max-width: 205px;
+  }
+
+  .info__tags {
+      display: inline-block;
+  }
+  
+  .info__img {
+    display: inline-block;
+    fill: #00c8c8;
+  }
+  
+  .info__clock {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .info__date_margin {
+    margin-left: 5px;
+    color: #898989;
+  }
+  
+  .info__contact-img {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .info__contacts {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  
+  .info__contact-text_margin {
+    margin-left: 20px;
+  }
+  
+  .info__link {
+    color: #c0c0c0;
+    cursor: pointer;
+  }
+  
+  .info__link:hover {
+    text-decoration: none;
+    color: #00c8c8;
+  }
+  
+  .info__h3 {
+    color: #ffffff;
+  }
+  
+  .info__hr {
+    border: none;
+    color: #898989;
+    background-color: #898989;
+    height: 1px;
+  }
+  
+  .info mark {
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 0px;
+  }
+  
+  .info mark:hover {
+    color: #00c8c8;
+  }

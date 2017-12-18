@@ -1,19 +1,50 @@
 import React from 'react';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
-
 import './about.css';
 
-const MapComponent = withScriptjs(withGoogleMap((props) =>
+const { compose, withProps, withHandlers } = require("recompose");
+
+
+const MapComponent = compose(
+    withProps({
+        googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyBjIqDfINh-giXfkdVI4G2VmATpzhYisGc",
+        loadingElement: <div style={{ height: `100%` }} />,
+        containerElement: <div style={{ height: `400px` }} />,
+        mapElement: <div className="map" />
+    }),
+    withScriptjs,
+    withGoogleMap
+)(props =>
     <GoogleMap
         defaultZoom={15}
         defaultCenter={{ lat: 51.667242, lng: 39.195113 }}
     >
-        <Marker position={{ lat: 51.667242, lng: 39.195113 }} />
+        {props.markers.map((marker, index) => (
+            <Marker key={index} position={{ lat: marker.lat, lng: marker.lng }} />
+        ))}
     </GoogleMap>
-))
+    )
 
 class About extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            markers: [
+                { lat: 51.667242, lng: 39.195113 }
+            ]
+        }
+    }
+
+    addMarker() {
+        const markers = this.state.markers.slice();
+        markers.push({ lat: 1, lng: 2 });
+        this.setState({
+            markers: markers
+        });
+    }
+
     render() {
+        const markers = this.state.markers;
         return (
             <div className="about-us">
                 <h3> About us </h3>
@@ -40,14 +71,10 @@ class About extends React.Component {
                 </p>
                 <div className="section-map">
                     <div className="section-map__add">
-                    <button type="button" className="btn btn-defaulr section-map__button" data-toggle="modal" data-target="#inputDialog">Add marker</button>
+                        <button type="button" className="btn btn-defaulr section-map__button" data-toggle="modal" data-target="#inputDialog"
+                            onClick={() => this.addMarker()} >Add marker</button>
                     </div>
-                    <MapComponent
-                        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjIqDfINh-giXfkdVI4G2VmATpzhYisGc"
-                        loadingElement={<div style={{ height: `100%` }} />}
-                        containerElement={<div style={{ height: `400px` }} />}
-                        mapElement={<div className="map" />}
-                    />
+                    <MapComponent markers={markers} />
                 </div>
             </div>
         );

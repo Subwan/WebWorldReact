@@ -21,5 +21,4 @@ yarn-debug.log*
 yarn-error.log*
 README.md
 package-lock.json
-package.json
 public/manifest.json

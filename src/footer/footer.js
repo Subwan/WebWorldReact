@@ -10,7 +10,7 @@ class Footer extends React.Component {
                     <div className="footer__rights">
                         <p className="no-margin">2013 Web world. All rights reserved. Theme by cssautther</p>
                     </div>
-                    <div className="footer__social" className="social-links">
+                    <div className="footer__social social-links">
                         <a href="#rss" className="social-link">
                             <svg className="icon icon-rss social-bar__icon">
                                 <use href="#icon-rss"></use>

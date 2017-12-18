@@ -38,12 +38,17 @@ class About extends React.Component {
                     lobortis nunc faucibus, molestie nibh. Suspendisse potenti. Suspendisse eleifend
                     fringilla leo eu porta. Maecenas quis justo eu augue laoreet rhoncus non sed nisl.
                 </p>
-                <MapComponent
-                    googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjIqDfINh-giXfkdVI4G2VmATpzhYisGc"
-                    loadingElement={<div style={{ height: `100%` }} />}
-                    containerElement={<div style={{ height: `400px` }} />}
-                    mapElement={<div className="map" />}
-                />
+                <div className="section-map">
+                    <div className="section-map__add">
+                    <button type="button" className="btn btn-defaulr section-map__button" data-toggle="modal" data-target="#inputDialog">Add marker</button>
+                    </div>
+                    <MapComponent
+                        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjIqDfINh-giXfkdVI4G2VmATpzhYisGc"
+                        loadingElement={<div style={{ height: `100%` }} />}
+                        containerElement={<div style={{ height: `400px` }} />}
+                        mapElement={<div className="map" />}
+                    />
+                </div>
             </div>
         );
     }

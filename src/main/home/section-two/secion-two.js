@@ -8,7 +8,7 @@ function ItemList(props) {
     const item = props.item;
     return (
         <div className="section-two__item">
-            <img src={item.src} />
+            <img src={item.src} alt="section-two-img"/>
             <div className="section-two__item-text">
                 <h3 className="section-two__item-header_font-size"><b>{item.head}</b></h3>
                 <p>{item.text}</p>

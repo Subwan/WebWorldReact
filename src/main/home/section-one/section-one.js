@@ -19,7 +19,7 @@ class SectionOne extends React.Component {
                 </div>
                 <div className="section-one__tabs">
                     <div className="section-one__tab-one section-one__tab">
-                        <a href="#">
+                        <a>
                             <svg className="icon icon-display section-one__icon">
                                 <use href="#icon-display"></use>
                             </svg>
@@ -28,7 +28,7 @@ class SectionOne extends React.Component {
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting of the industry. Lorem Ipsum has been</p>
                     </div>
                     <div className="section-one__tab-two section-one__tab">
-                        <a href="#">
+                        <a>
                             <svg className="icon icon-edit section-one__icon">
                                 <use href="#icon-edit"></use>
                             </svg>
@@ -37,7 +37,7 @@ class SectionOne extends React.Component {
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting of the industry. Lorem Ipsum has been</p>
                     </div>
                     <div className="section-one__tab-three section-one__tab">
-                        <a href="#">
+                        <a>
                             <svg className="icon icon-image section-one__icon">
                                 <use href="#icon-image"></use>
                             </svg>

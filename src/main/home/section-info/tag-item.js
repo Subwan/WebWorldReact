@@ -1,5 +1,3 @@
-import React from 'react';
-
 const TagItems = [
     { text: "apps", marked: false },
     { text: "blog", marked: true },

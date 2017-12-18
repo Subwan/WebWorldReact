@@ -7,6 +7,7 @@ import './index.css';
 import Header from './header/header.js';
 import Menu from './menu/menu.js';
 import Main from './main/main.js';
+import Footer from './footer/footer.js';
 
 class App extends React.Component {
   render() {
@@ -15,6 +16,7 @@ class App extends React.Component {
         <Header />
         <Menu />
         <Main />
+        <Footer />
       </div>
     );
   }

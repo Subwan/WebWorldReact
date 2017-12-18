@@ -22,8 +22,8 @@ class ItemList extends React.Component {
 
 class SectionInfo extends React.Component {
     render() {
-        const items = TagItems.map((item) =>
-            <ItemList item={item} />
+        const items = TagItems.map((item, index) =>
+            <ItemList key={index} item={item} />
         );
         return (
             <div className="info">

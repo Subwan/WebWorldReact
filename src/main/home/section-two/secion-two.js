@@ -19,8 +19,8 @@ function ItemList(props) {
 
 class SectionTwo extends React.Component {
     render() {
-        const itemList = SectionTwoItems.map((item) =>
-            <ItemList key={item.toString()} item={item} />
+        const itemList = SectionTwoItems.map((item, index) =>
+            <ItemList key={index} item={item} />
         );
         return (
             <div className="section-two">

@@ -19,22 +19,22 @@ function ItemList(props) {
 }
 
 function SampleNextArrow(props) {
-  const {className, style, onClick} = props
+  const { className, style, onClick } = props
   return (
     <div
       className={className}
-      style={{...style}}
+      style={{ ...style }}
       onClick={onClick}
     ></div>
   );
 }
 
 function SamplePrevArrow(props) {
-  const {className, style, onClick} = props
+  const { className, style, onClick } = props
   return (
     <div
       className={className}
-      style={{...style}}
+      style={{ ...style }}
       onClick={onClick}
     ></div>
   );
@@ -52,8 +52,8 @@ class Carousel extends React.Component {
       prevArrow: <SamplePrevArrow />
     }
     const items = CarouselItems;
-    const itemList = items.map((item) =>
-      <div> <ItemList item={item} /> </div>
+    const itemList = items.map((item, index) =>
+      <div key={index}> <ItemList item={item} /> </div>
     );
     return (
       <div className="carousel">

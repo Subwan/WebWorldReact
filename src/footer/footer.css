@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    height: 90px;
+    background-color: #252323;
+    color: #c1c1c1;
+  }
+  
+  .footer__container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 1072px;
+  }

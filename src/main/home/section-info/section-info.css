@@ -20,7 +20,7 @@
   }
 
   .info__tags {
-      display: inline-block;
+      display: block;
   }
   
   .info__img {
@@ -56,6 +56,8 @@
   .info__link {
     color: #c0c0c0;
     cursor: pointer;
+    display: inline-block;
+    padding-right: 3px;
   }
   
   .info__link:hover {

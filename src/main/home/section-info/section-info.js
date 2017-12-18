@@ -48,7 +48,7 @@ class SectionInfo extends React.Component {
                     </div>
                     <div className="info__item">
                         <h3 className="info__h3">Tags</h3>
-                        <p className="info__tags">{items}</p>
+                        <div className="info__tags">{items}</div>
                     </div>
                     <div className="info__item">
                         <h3 className="info__h3">A little about us</h3>

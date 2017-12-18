@@ -1,0 +1,34 @@
+.about-us {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-top: 134px;
+    min-height: calc(100vh - 224px);
+  }
+  
+  .map {
+    width: 400px;
+    height: 400px;
+  }
+  
+  .section-map {
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  
+  .section-map__add {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+  }
+  
+  .section-map__input {
+  
+  }
+  
+  .section-map__button {
+    margin-top: 2vw;
+  }
+  

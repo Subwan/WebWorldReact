@@ -61,29 +61,6 @@ class Carousel extends React.Component {
           {itemList}
         </Slider>
       </div>
-
-      // <div id="banner" className="carousel slide" data-ride="carousel">
-      //   <ol className="carousel-indicators">
-      //     <li data-target="#banner" data-slide-to="0" className="active"></li>
-      //     <li data-target="#banner" data-slide-to="1"></li>
-      //     <li data-target="#banner" data-slide-to="2"></li>
-      //     <li data-target="#banner" data-slide-to="3"></li>
-      //     <li data-target="#banner" data-slide-to="4"></li>
-      //   </ol>
-      //   <div className="carousel-inner" role="listbox">
-      //     {itemList}
-      //   </div>
-      //   <div className="center-align">
-      //     <a className="left carousel-control" href="#banner" role="button" data-slide="prev">
-      //       <span className="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-      //       <span className="sr-only">Previous</span>
-      //     </a>
-      //     <a className="right carousel-control" href="#banner" role="true" data-slide="next">
-      //       <span className="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-      //       <span className="sr-only">Next</span>
-      //     </a>
-      //   </div>
-      // </div>
     );
   }
 };

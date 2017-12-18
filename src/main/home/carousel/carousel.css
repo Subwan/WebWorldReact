@@ -14,6 +14,11 @@
   z-index: 10;
   width: 40vw;
   margin-left: 30vw;
+  font-size: 1.5rem;
+}
+
+.item__caption>h1 {
+  font-size: 3rem;
 }
 
 .slick-dots {
@@ -41,19 +46,6 @@
   z-index: 10;
 }
 
-.carousel-control {
-    width: 40%;
- }
-  
-.carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .glyphicon-circle-arrow-left, .carousel-control .glyphicon-menu-left, .carousel-control .glyphicon-menu-right {
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    z-index: 5;
-    font-size: 50px;
-}
-  
-  
 .item>img {
     position: absolute;
     top: -260px;

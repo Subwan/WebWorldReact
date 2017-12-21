@@ -1,5 +1,8 @@
 import React from 'react';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
+
+import InputCoord from './input-coord/input-coord.js';
+
 import './about.css';
 
 const { compose, withProps, withHandlers } = require("recompose");
@@ -36,7 +39,7 @@ class About extends React.Component {
     }
 
     addMarker() {
-        const markers = this.state.markers.slice();
+        const markers = [...this.state.markers];
         markers.push({ lat: 1, lng: 2 });
         this.setState({
             markers: markers
@@ -71,8 +74,9 @@ class About extends React.Component {
                 </p>
                 <div className="section-map">
                     <div className="section-map__add">
-                        <button type="button" className="btn btn-defaulr section-map__button" data-toggle="modal" data-target="#inputDialog"
-                            onClick={() => this.addMarker()} >Add marker</button>
+                        <button type="button" className="btn btn-defaulr section-map__button"
+                            data-toggle="modal" data-target="#inputDialog">Add marker</button>
+                        <InputCoord onClick={() => this.addMarker()} />
                     </div>
                     <MapComponent markers={markers} />
                 </div>

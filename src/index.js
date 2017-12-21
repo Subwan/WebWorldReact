@@ -8,12 +8,14 @@ import App from './components/App.js';
 import webWorldApp from './reducers/index.js';
 
 
-let store = createStore();
+let store = createStore(webWorldApp);
 
 ReactDOM.render((
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>
 ),
   document.getElementById('root')
 );

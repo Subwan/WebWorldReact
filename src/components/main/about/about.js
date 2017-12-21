@@ -1,7 +1,7 @@
 import React from 'react';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 
-import InputCoord from './input-coord/input-coord.js';
+import InputCoord from '../../../containers/input-coord';
 
 import './about.css';
 

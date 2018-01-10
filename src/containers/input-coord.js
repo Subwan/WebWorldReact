@@ -9,7 +9,8 @@ let InputCoord = () => {
                 <form class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title">Add marker</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" 
+                            data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -18,7 +19,7 @@ let InputCoord = () => {
                             name="default.lat" type="number"
                             class="section-map__input" required
                         />
-                        <input id="longitude" ref={node => lat = node}
+                        <input id="longitude" ref={node => lng = node}
                             name="default.lng" type="number"
                             class="section-map__input" required
                         />

@@ -1,6 +1,8 @@
-const addCoordinates = (state = [], action) => {
-    switch (action.tipe) {
-        case 'ADD_COORDS':
+import { ADD_COORDS } from './constants';
+
+const addCoordinates =  {
+    
+    [ADD_COORDS]: (state, action) => {
             return [
                 ...state,
                 {
@@ -9,8 +11,6 @@ const addCoordinates = (state = [], action) => {
                     lng: action.lng
                 }
             ]
-        default:
-            return state
     }
 }
 

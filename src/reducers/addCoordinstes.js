@@ -2,7 +2,7 @@ import { ADD_COORDS } from './constants';
 
 const addCoordinates =  {
     
-    [ADD_COORDS]: (state, action) => {
+    [ADD_COORDS]: (state = [], action) => {
             return [
                 ...state,
                 {

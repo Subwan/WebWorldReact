@@ -1,6 +1,7 @@
 import React from 'react';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 import InputCoord from '../../../containers/input-coord';
 
@@ -22,22 +23,23 @@ const MapComponent = compose(
     <GoogleMap
         defaultZoom={15}
         defaultCenter={{ lat: 51.667242, lng: 39.195113 }}
-    >
+    > {console.log(props)}
         {props.markers.map((marker, index) => (
             <Marker key={index} position={{ lat: marker.lat, lng: marker.lng }} />
         ))}
     </GoogleMap>
     )
 
-const About = ({ coords }) => {
-    const markers = [{ lat: 51.667242, lng: 39.195113 }];
-//    const markers = [coords];
-
-    return (
-        <div className="about-us">
-            <h3> About us </h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec turpis lectus,
+class About extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <div className="about-us">
+                <h3> About us </h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec turpis lectus,
                     ultricies vitae metus et, sodales tincidunt quam. Interdum et malesuada fames
                     ac ante ipsum primis in faucibus. Nam eleifend ultrices dui, at varius urna
                     egestas ac. Vivamus in blandit tortor, sit amet euismod orci. Mauris blandit
@@ -57,25 +59,27 @@ const About = ({ coords }) => {
                     lobortis nunc faucibus, molestie nibh. Suspendisse potenti. Suspendisse eleifend
                     fringilla leo eu porta. Maecenas quis justo eu augue laoreet rhoncus non sed nisl.
                 </p>
-            <div className="section-map">
-                <div className="section-map__add">
-                    <button type="button" className="btn btn-defaulr section-map__button"
-                        data-toggle="modal" data-target="#inputDialog">Add marker</button>
-                    <InputCoord />
+                <div className="section-map">
+                    <div className="section-map__add">
+                        <button type="button" className="btn btn-defaulr section-map__button"
+                            data-toggle="modal" data-target="#inputDialog">Add marker</button>
+                        <InputCoord />
+                    </div>
+                    <MapComponent markers={this.props.coords} />
                 </div>
-                <MapComponent markers={markers} />
             </div>
-        </div>
-    );
+        );
+    }
 }
 
 About.propTypes = {
-    coords: PropTypes.arrayOf(
-        PropTypes.shape({
-            lat: PropTypes.number.isRequired,
-            lng: PropTypes.number.isRequired
-        }).isRequired
-    ).isRequired
+    coords: PropTypes.array.isRequired
 }
 
-export default About;
+const mapStateToProps = (state) => {
+    return {
+        coords: state.coords
+    }
+}
+
+export default connect(mapStateToProps)(About);

@@ -2,8 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { addCoords } from '../actions';
 
-import { About } from '../components/main/about/about';
-
 let InputCoord = ({ dispatch }) => {
     let lng;
     let lat;

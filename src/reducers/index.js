@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 
-import addCoordinates from './addCoordinstes';
+import coordReducer from './addCoordinstes';
 
 
 const webWorldApp = combineReducers({
-    addCoordinates
+    coordReducer
 })
 
 export default webWorldApp;

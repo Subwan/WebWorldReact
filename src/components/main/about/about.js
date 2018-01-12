@@ -78,7 +78,7 @@ About.propTypes = {
 
 const mapStateToProps = (state) => {
     return {
-        coords: state.coords
+        coords: state.coordReducer.coords
     }
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addCoords } from '../actions';
+import { addCoords } from '../../../../actions/index';
 
 let InputCoord = ({ dispatch }) => {
     let lng;
@@ -9,7 +9,8 @@ let InputCoord = ({ dispatch }) => {
         <div id="inputDialog" className="modal" tabIndex="-1" role="dialog">
             <div className="modal-dialog" role="document">
                 <form className="modal-content"
-                    onSubmit={e => {
+                    onSubmit={function(e) {
+                        console.log(lat.value);
                         e.preventDefault();
                         if (!lat.value.trim() || !lng.value.trim()) {
                             return;
@@ -36,9 +37,8 @@ let InputCoord = ({ dispatch }) => {
                         />
                     </div>
                     <div className="modal-footer">
-                        <button type="submit" className="btn btn-defaulr"
-                            data-dismiss="modal">
-                            OK
+                        <button type="submit" className="btn btn-defaulr">
+                        OK
                         </button>
                     </div>
                 </form>

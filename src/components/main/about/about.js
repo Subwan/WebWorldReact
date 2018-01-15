@@ -3,7 +3,7 @@ import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-map
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import InputCoord from '../../../containers/input-coord';
+import InputCoord from './input-coord/input-coord';
 
 import './about.css';
 
@@ -31,9 +31,6 @@ const MapComponent = compose(
     )
 
 class About extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
             <div className="about-us">
@@ -72,9 +69,6 @@ class About extends React.Component {
     }
 }
 
-About.propTypes = {
-    coords: PropTypes.array.isRequired
-}
 
 const mapStateToProps = (state) => {
     return {

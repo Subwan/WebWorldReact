@@ -7,8 +7,7 @@ import { createStore } from 'redux';
 import App from './components/App.js';
 import webWorldApp from './reducers/index.js';
 
-
-let store = createStore(webWorldApp);
+let store = createStore(webWorldApp,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render((
   <Provider store={store}>

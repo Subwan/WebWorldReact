@@ -10,12 +10,11 @@ let InputCoord = ({ dispatch }) => {
             <div className="modal-dialog" role="document">
                 <form className="modal-content"
                     onSubmit={function(e) {
-                        console.log(lat.value);
                         e.preventDefault();
                         if (!lat.value.trim() || !lng.value.trim()) {
                             return;
                         }
-                        dispatch(addCoords(lat.value, lng.value));
+                        dispatch(addCoords(+lat.value, +lng.value));
                         lng.value = '';
                         lat.value = '';
                     }}>

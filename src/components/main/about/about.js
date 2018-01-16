@@ -1,13 +1,12 @@
 import React from 'react';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import InputCoord from './input-coord/input-coord';
 
 import './about.css';
 
-const { compose, withProps, withHandlers } = require("recompose");
+const { compose, withProps } = require("recompose");
 
 
 const MapComponent = compose(
@@ -23,7 +22,7 @@ const MapComponent = compose(
     <GoogleMap
         defaultZoom={15}
         defaultCenter={{ lat: 51.667242, lng: 39.195113 }}
-    > {console.log(props)}
+    >
         {props.markers.map((marker, index) => (
             <Marker key={index} position={{ lat: marker.lat, lng: marker.lng }} />
         ))}
@@ -33,6 +32,7 @@ const MapComponent = compose(
 class About extends React.Component {
     render() {
         return (
+            
             <div className="about-us">
                 <h3> About us </h3>
                 <p>
@@ -62,18 +62,15 @@ class About extends React.Component {
                             data-toggle="modal" data-target="#inputDialog">Add marker</button>
                         <InputCoord />
                     </div>
-                    <MapComponent markers={this.props.coords} />
+                    <MapComponent markers={this.props.markers} />
                 </div>
             </div>
         );
     }
 }
 
+const mapStateToProps = (state) => ({
+        markers: state.coords.markers
+})
 
-const mapStateToProps = (state) => {
-    return {
-        coords: state.coordReducer.coords
-    }
-}
-
-export default connect(mapStateToProps)(About);
+export default connect(mapStateToProps,{})(About);

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { Switch, Route } from 'react-router-dom';
-import { debug } from 'util';
 
 import Home from './home/home.js';
 import About from './about/about.js';

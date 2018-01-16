@@ -4,7 +4,7 @@ import coordReducer from './addCoordinstes';
 
 
 const webWorldApp = combineReducers({
-    coordReducer
+    coords: coordReducer
 })
 
 export default webWorldApp;

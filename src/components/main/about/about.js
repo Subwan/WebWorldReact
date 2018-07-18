@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import InputCoord from './input-coord/input-coord';
 
 import './about.css';
-
+// import { audio } from '
 const { compose, withProps } = require("recompose");
 
 
@@ -29,33 +29,20 @@ const MapComponent = compose(
     </GoogleMap>
     )
 
+const audio = new Audio('file:///home/subwan/projects/WebWorldReact/src/assets/new-accident.mp3');
+
 class About extends React.Component {
+
+    onClick() {
+        audio.play().then(()=>{console.log('succ')}).catch((e)=>{console.log('err', e)});
+    };
+
     render() {
         return (
-            
+
             <div className="about-us">
                 <h3> About us </h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec turpis lectus,
-                    ultricies vitae metus et, sodales tincidunt quam. Interdum et malesuada fames
-                    ac ante ipsum primis in faucibus. Nam eleifend ultrices dui, at varius urna
-                    egestas ac. Vivamus in blandit tortor, sit amet euismod orci. Mauris blandit
-                    vel erat nec tincidunt. Donec at risus egestas, luctus elit id, fringilla nibh.
-                    Vestibulum et fermentum urna. Suspendisse potenti. Fusce tincidunt sollicitudin
-                    odio, vitae tempor odio dictum in. Aenean et varius nunc. Ut maximus dapibus
-                    lectus, at mattis diam fermentum nec. Maecenas porttitor velit elit, at efficitur
-                    arcu rutrum id. Aenean mi nulla, mollis eget ex eget, consectetur euismod diam.
-                    Pellentesque sed ligula et mi pretium pretium ac et erat. Integer blandit porta
-                    sapien, sed condimentum nibh imperdiet at. Praesent ac magna hendrerit,
-                    scelerisque orci a, placerat magna. Sed a neque nec nibh scelerisque rhoncus
-                    vel ut nisl. Nunc accumsan malesuada elit, quis bibendum velit placerat ac.
-                    Ut porta orci et lobortis viverra. Nunc at elementum lacus. Nulla maximus cursus
-                    turpis facilisis luctus. Integer quis dui quis mi venenatis rhoncus vitae ac urna.
-                    Etiam rutrum feugiat finibus. Ut eu est felis. Orci varius natoque penatibus et
-                    magnis dis parturient montes, nascetur ridiculus mus. Sed mattis quam malesuada,
-                    lobortis nunc faucibus, molestie nibh. Suspendisse potenti. Suspendisse eleifend
-                    fringilla leo eu porta. Maecenas quis justo eu augue laoreet rhoncus non sed nisl.
-                </p>
+                <button onClick={this.onClick}>AAAA</button>
                 <div className="section-map">
                     <div className="section-map__add">
                         <button type="button" className="btn btn-defaulr section-map__button"
